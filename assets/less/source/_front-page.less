@@ -1,0 +1,84 @@
+.lasso-theme--feature {
+    .theme-width--wide;
+    position:relative;
+    .x-rem(margin-top,4);
+    .x-rem(margin-bottom,4);
+    .clearfix();
+
+    .lasso-theme--feature__title {
+        margin-top:0;
+    }
+
+    .lasso-theme--feature__col{
+
+        &.img {
+            .ah-column(6);
+
+        }
+
+        &.text {
+            .ah-column(6);
+        }
+
+    }
+
+    .lasso-theme--feature__info {
+        line-height: 28px;
+    }
+
+    .lasso-theme--feature__img {
+        float: right;
+        background:white;
+        padding:2px;
+        border:1px solid @accent;
+        border-radius: 3px;
+        position: relative;
+        top:10px;
+    }
+
+    &:nth-child(even) {
+        .lasso-theme--feature__img {
+            float: left;
+        }
+    }
+
+    + .lasso-theme--feature {
+        margin-top:0;
+    }
+
+    p {
+        margin-bottom: 16px;
+    }
+
+    .btn {
+        letter-spacing: 0.05em;
+        i {
+            font-size:18px;
+            position: relative;
+            line-height: 17px;
+            margin-left:2px;
+        }
+    }
+}
+
+.ase-icon {
+    height:60px;
+    width:60px;
+    background:url(../img/aesop-mark-white.png);
+    background-size:90%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.home {
+
+    .lasso-theme--section__info:last-of-type {
+        background:darken(@base,4);
+    }
+
+    .lasso-theme--feature:nth-child(2) {
+        .text {
+            padding-left:10px;
+        }
+    }
+}

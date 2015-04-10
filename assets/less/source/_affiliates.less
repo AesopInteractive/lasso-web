@@ -1,0 +1,106 @@
+.page-template-template--affiliates {
+    .lasso-theme-page {
+        padding-top:70px;
+    }
+}
+
+#affwp-affiliate-dashboard {
+    p strong {
+        font-weight:700;
+    }
+
+    table {
+        border:1px solid #e0e0e0;
+
+        th,td {
+            border:1px solid @accent;
+        }
+
+        tr:hover td {
+            color:white;
+        }
+    }
+
+    #affwp-affiliate-dashboard-tabs {
+        position: absolute;
+        top:110px;
+        left:0;
+        right:0;
+        width:100%;
+        margin-bottom: @padding-px;
+        text-align: center;
+        background:white;
+        border-bottom:1px solid @accent;
+        .x-rem(margin-bottom,1.5);
+        z-index:1;
+
+        li {
+            display: inline-block;
+            margin:0 18px;
+            line-height:3;
+
+            &:first-child { margin-left:0; }
+            &:last-child { margin-right:0; }
+
+            a {
+                color:lighten(@text-color,25);
+                display: block;
+                font-size: @font-size-tiny;
+                .transition(color .2s ease);
+
+                &:hover {
+                    color:@primary;
+                }
+            }
+        }
+    }
+
+    .affwp-tab-content {
+        .lasso-theme--back();
+
+        h4:first-of-type {
+            margin-top:0;
+            font-weight:700;
+            font-family:@font-family-heading;
+        }
+    }
+
+    #affwp-affiliate-dashboard-referral-counts {
+        margin-bottom:@padding-px;
+    }
+
+    table.affwp-table {
+        margin-bottom:0;
+    }
+}
+
+#affwp-affiliate-dashboard-profile-form {
+
+    label,input {
+        display: block;
+    }
+    label {
+        width:100%;
+    }
+
+    label[for="affwp-referral-notifications"] {
+        line-height:18px;
+        font-weight:normal;
+        margin:15px auto 25px;
+        font-size:@font-size-small;
+        padding-left:35px;
+    }
+}
+
+#affwp-graphs-date-options {
+    width:300px;
+    display: inline-block;
+    position: relative;
+    top:2px;
+}
+
+.tickLabel {
+    font-size: 15px;
+    font-family:@font-family-sans-serif;
+    line-height: 18px;
+}

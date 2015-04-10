@@ -1,0 +1,17 @@
+{
+  "name": "lasso/lasso-theme",
+  "type": "wordpress-theme",
+  "description": "Aesop Hosted user theme",
+  "keywords": ["theme","wordpress"],
+  "homepage": "http://story.am",
+  "authors": [
+    {
+      "name": "Nick Haskins",
+      "email": "email@nickhaskins.com",
+      "homepage": "http://nickhaskins.com"
+    }
+  ],
+  "require": {
+    "composer/installers": "~1.0.6"
+  }
+}

@@ -1,0 +1,119 @@
+.lasso-theme--pricing {
+    .clearfix();
+    .theme-width();
+}
+
+.lasso-theme--pricing__single {
+    .ah-column(4);
+    text-align: center;
+    background:white;
+    padding:15px;
+    border-radius:3px;
+    border:1px solid @accent;
+    .opacity(0.75);
+    .transition(opacity .2s ease);
+
+    &:hover {
+        .opacity(1);
+    }
+
+    .lasso-theme--pricing__title {
+        margin:0;
+        font-size: @font-size-base - 0.5;
+    }
+
+    .lasso-theme--pricing__features {
+
+        font-family: @font-family-sans-serif;
+        font-size: @font-size-small;
+
+        li {
+            border-radius:3px;
+            &:nth-child(even) {
+                background:@base;
+            }
+        }
+    }
+
+    .lasso-theme--pricing__cost {
+        color:@primary;
+        font-weight:bold;
+        margin:15px auto 18px;
+    }
+
+    &:nth-child(2){
+        border:2px solid @primary;
+        .opacity(1);
+
+        .btn {
+            background:@primary;
+            color:white;
+
+            &:hover {
+                background:lighten(@primary,7);
+            }
+        }
+    }
+
+    .btn {
+        color:inherit;
+        font-size: @font-size-small;
+        background:@base;
+        width:100%;
+        display:block;
+        margin:15px auto 0;
+        text-transform: uppercase;
+
+        &:hover {
+            color:white;
+            background:@primary;
+        }
+    }
+    &:nth-child(2),
+    &:last-child {
+        .lasso-theme--pricing__cost {
+            position: relative;
+            color:@text-color;
+            font-weight:100;
+
+            &:after {
+                content:'';
+                border-bottom:2px solid @primary;
+                width:60px;
+                height:2px;
+                left:0;
+                right:0;
+                margin:0 auto;
+                position: absolute;;
+                top:18px;
+                bottom:15px;
+                .rotate(-15deg);
+            }
+
+            span {
+                font-weight:700;
+                color:@primary;
+                display:block;
+            }
+        }
+    }
+}
+
+.lasso-theme--section__note {
+    .theme-width;
+    .x-rem(margin-top,@padding * 1.5);
+    border-bottom:1px solid @accent;
+    padding-bottom:1.25rem;
+
+    p {
+        font-size:@font-size-tiny;
+        line-height: @font-size-small;
+        font-style: italic;
+        margin:10px auto;
+    }
+
+    + .lasso-theme--section__faq {
+        padding-top:1.5rem;
+        padding-bottom:1.5rem;
+    }
+}

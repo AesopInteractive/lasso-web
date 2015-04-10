@@ -1,0 +1,213 @@
+.lasso-theme--back {
+    .lasso-theme--back();
+}
+
+    .lasso-theme--section__title {
+        font-weight:700;
+        text-align: center;
+
+        + p {
+            max-width:80%;
+            text-align: center;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+
+.lasso-theme--section__info {
+    position: relative;
+    padding:30px 15px;
+    padding:1.5rem 0.75rem;
+
+    &.has-bg {
+
+        text-shadow:1px 1px rgba(0,0,0,0.33);
+
+        .lasso-theme--section__img {
+            background-attachment: fixed;
+        }
+
+        .lasso-theme--section__gut {
+            color:white;
+        }
+    }
+
+    &.cta {
+        text-align: center;
+    }
+
+}
+.lasso-theme--section__gut {
+    .theme-width();
+    position: relative;
+    z-index: 1;
+
+    &.wide {
+        .theme-width--wide();
+    }
+}
+
+.lasso-theme--section__img {
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:after {
+        content:'';
+        position: absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        background:fadeout(@primary,40);
+    }
+
+    &.feature-grid {
+        background-image:url(../img/bg.jpg);
+    }
+    &.mast {
+        background-image:url(../img/bg.jpg);
+    }
+}
+
+.lasso-theme--section__hero {
+
+    .lasso-theme--section__hero-inner {
+        text-align: center;
+
+        &.has-small {
+            margin-bottom:35px;
+            p {
+                margin-bottom: 0;
+            }
+
+            strong {
+                font-weight:700;
+            }
+        }
+    }
+
+    h2 {
+        margin-bottom: 5px;
+        font-weight:400;
+    }
+
+    p + small {
+        font-size: @font-size-small;
+        margin:0;
+        font-style: italic;
+    }
+}
+
+.lasso-theme--section__faq {
+
+    position: relative;
+
+    li {
+        font-size: @font-size-small;
+        .x-rem(margin-bottom,@padding * 4);
+        h6 {
+            font-weight:bold;
+            margin:0;
+        }
+        p {
+            margin:0;
+        }
+    }
+}
+
+.lasso-theme--faq-list {
+
+    li {
+        list-style-type: none !important;
+        font-size: @font-size-small;
+        .x-rem(margin-bottom,@padding * 4);
+        h6 {
+            font-weight:bold;
+            margin:0;
+        }
+        p {
+            margin:0;
+        }
+    }
+}
+
+.lasso-theme--feature-grid {
+
+    .clearfix();
+
+    li {
+        display: inline-block;
+        width:50%;
+        margin-right:-4px;
+        .clearfix();
+        text-align: left;
+        position: relative;
+        vertical-align: top;
+        padding-left: 70px;
+    }
+
+    h6, p {
+        display: inline-block;
+        text-align: left;
+    }
+
+    i {
+        .x-rem(font-size,2.15);
+        height:60px;
+        width:60px;
+        position: absolute;
+        top:0;
+        left:0;
+    }
+
+    h6 {
+        margin:5px auto 0;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: @font-size-small;
+        line-height:@font-size-small;
+        font-family: @font-family-sans-serif;
+        padding-right:5px;
+    }
+
+}
+
+.lasso-theme--section__words {
+
+    background:darken(@base,4);
+    border-top:1px solid fadeout(white,20);
+    //border-bottom:1px solid fadeout(white,20);
+    padding-bottom:@padding-px;
+
+    h3,p {
+        text-align: center;
+    }
+    h3 {
+        font-weight:700;
+    }
+
+    ul {
+        .clearfix();
+
+        li {
+            .ah-column(6);
+        }
+    }
+}
+
+.lasso-theme--changelog {
+    font-size: @font-size-small;
+}
+
+
+
+

@@ -1,0 +1,141 @@
+.lasso-theme--menu {
+    text-align: center;
+    background:white;
+    border-bottom:1px solid @accent;
+    .x-rem(margin-bottom,1.5);
+    .box-shadow(0 -4px 4px -1px rgba(0,0,0,0.25));
+    position:relative;
+    z-index:1;
+
+    li {
+        display: inline-block;
+        margin:0 18px;
+        line-height:3;
+
+        &:first-child { margin-left:0; }
+        &:last-child { margin-right:0; }
+
+        a {
+            color:lighten(@text-color,25);
+            display: block;
+            font-size: @font-size-tiny;
+            .transition(color .2s ease);
+
+            &:hover {
+                color:@primary;
+            }
+        }
+    }
+}
+
+.lasso-theme--logo {
+
+    display: block;
+    max-width:90px;
+    position: absolute;
+    left:15px;
+    top:10px;
+    z-index: 2;
+}
+
+.lasso-theme--mast__wrap {
+    text-align: center;
+    position: relative;
+    width:100%;
+    overflow: hidden;
+
+    .lasso-theme--mast__inner {
+        color:white;
+        position: relative;
+        .theme-width--wide;
+        text-shadow:1px 1px rgba(0,0,0,0.25);
+        .clearfix();
+    }
+
+    h1 {
+        line-height: 1;
+        font-size:3em;
+        font-family:'Open Sans';
+        font-weight:bold;
+    }
+
+    .lead {
+
+    }
+
+    img:not(.lasso-theme--logo) {
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
+        .box-shadow(0 0 10px -2px rgba(0,0,0,0.65));
+    }
+
+    .btn {
+        font-size:inherit;
+        font-weight:bold;
+        .x-rem(margin-bottom,@padding * 3.2);
+        .box-shadow(0 0 10px -2px rgba(0,0,0,0.25));
+
+        + .btn {
+            margin-left:10px;
+        }
+
+        &:active {
+             .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+        }
+    }
+
+    // a tall version like on the home page
+    &.front {
+        .lasso-theme--mast__inner {
+            .x-rem(padding-top,6); // THIS
+
+        }
+    }
+
+    &.page {
+        min-height:110px;
+    }
+
+}
+
+// secondary theme menu used on the top right
+.lasso-theme--menu__secondary {
+
+    position:relative;
+    z-index:1;
+    position: absolute;
+    top:10px;
+    right:15px;
+    line-height: 3.7;
+
+    li {
+        display: inline-block;
+        margin:0 12px;
+        line-height:1.8;
+
+        &:first-child { margin-left:0; }
+        &:last-child { margin-right:0; }
+
+        a {
+            color:white;
+            display: block;
+            font-size: @font-size-small;
+            .transition(color .2s ease);
+
+            &:hover {
+                color:white;
+                border-bottom:2px solid white;
+                padding-bottom:2px;
+            }
+        }
+
+        &.current_page_item {
+            border-bottom:2px solid white;
+            padding-bottom:2px;
+
+            &:hover {
+                border-bottom:none;
+            }
+        }
+    }
+}

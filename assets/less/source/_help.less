@@ -1,0 +1,144 @@
+.lasso-theme--help-entry {
+    .clearfix();
+    margin-bottom:0;
+
+    li {
+
+        .ah-column(6);
+
+        &:first-child,
+        &:nth-child(2){
+            margin-bottom: 15px;
+            h5 {
+                position: relative;
+
+                &:before {
+                    font-family:Dashicons;
+                    margin-right:15px;
+                    position:relative;
+                    top:4px;
+                }
+            }
+        }
+
+        &:first-child {
+            padding-left:0;
+
+            h5:before {content:'\f110';}
+
+        }
+        &:nth-child(2) {
+            padding-right:0;
+
+            h5:before {content:'\f475';}
+        }
+        &:last-child {
+            .ah-column(12);
+
+            a {
+                padding-right:100px;
+                position: relative;
+
+                &:after {
+                    content:'\f466';
+                    position:absolute;
+                    right:40px;
+                    top:40%;
+                    font-family:Dashicons;
+                    font-size:125%
+                }
+            }
+        }
+
+
+        a {
+            display: block;
+            color:@text-color;
+            .lasso-theme--back();
+            .transition(all .15s ease);
+
+            &:hover {
+                background:@primary;
+                color:#eaeaea;
+            }
+        }
+
+        h5 {
+            margin:0 auto 5px;
+            line-height: 1;
+        }
+
+        p {
+            font-size: @font-size-small;
+            line-height:@font-size-small + 0.2;
+            margin-bottom: 0;
+        }
+    }
+
+    + p {
+        font-size: @font-size-small - 0.1;
+        line-height:@font-size-small + 0.1;
+        margin:30px auto @padding-px;
+        text-align: center;
+        color:lighten(@text-color,15);
+    }
+
+}
+
+.help--tldr {
+    background:@primary;
+    padding:@padding-px;
+    color:white;
+    padding-left:85px;
+    position: relative;
+    border-radius:3px;
+    margin-bottom: 40px;
+
+    @top: 32px;
+
+    &:before,
+    &:after {
+        font-weight:bold;
+        position:absolute;
+        width:40px;
+        height:24px;
+        left:@padding-px;
+        background: white;
+        color:@primary;
+        line-height:22px;
+        text-align: center;
+    }
+
+    &:before {
+        content:'TL';
+        top:@top;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        letter-spacing: 0.05em;
+    }
+
+    &:after {
+        content:'DR';
+        top:@top + 22px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+    ul,p {
+        font-family: @font-family-sans-serif;
+    }
+
+    ul {
+        margin:0;
+
+        li {
+            list-style-type: none;
+            margin-bottom: 0;
+            line-height: 1.4;
+
+            &:before {
+                content:'-';
+                margin-right:5px;
+            }
+        }
+    }
+}

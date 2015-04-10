@@ -1,0 +1,185 @@
+body .edd-submit.button.blue {
+    background: @primary;
+    font-family: @font-family-button;
+    border:1px solid @primary;
+
+    &:hover {
+        background: lighten(@primary,7);
+    }
+
+    &:active,
+    &:focus {
+        outline:none;
+    }
+}
+
+.edd-checkout { // body level
+    .lasso-theme-page {
+        max-width:600px;
+    }
+}
+
+#edd_checkout_wrap {
+
+    .edd-payment-icons {
+        text-align: center;
+        margin-bottom:40px;
+
+        img.payment-icon {
+            display: inline-block;
+            float:none;
+        }
+    }
+
+    #edd_final_total_wrap{
+        .lasso-theme--back();
+        padding-top:10px;
+        padding-bottom:12px;
+    }
+
+    legend {
+        padding-bottom:@padding-px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width:100%;
+    }
+
+    select {
+        width:50%;
+    }
+
+
+    #edd_cc_address,
+    #edd_cc_fields,
+    #edd_checkout_user_info {
+        span legend {
+            position: relative;
+            .box-sizing(border-box);
+
+            &:before {
+                margin-right:10px;
+                font-family:Dashicons;
+                top:3px;
+                position: relative;
+                color:@primary;
+            }
+        }
+    }
+    #edd_cc_address, {
+        span legend {
+            &:before {
+                content: '\f348';
+            }
+        }
+    }
+    #edd_checkout_user_info {
+        span legend {
+            &:before {
+                content: '\f110';
+            }
+        }
+    }
+    #edd_cc_fields {
+        span legend {
+            &:before {
+                content: '\f160';
+            }
+        }
+    }
+    // credit cart
+    fieldset#edd_cc_fields {
+        background:@primary;
+        border:1px solid darken(@primary,7) !important;
+        border:none;
+        color:#eaeaea;
+        text-shadow:1px 1px rgba(0,0,0,0.1);
+
+        .edd-description,
+        legend {
+            color:#eaeaea;
+        }
+
+        input[type="text"] {
+            background:white;
+        }
+
+        span legend:before {
+            color:white;
+        }
+    }
+
+    #edd-purchase-button {
+        font-size:@font-size-small + 0.2;
+        padding:6px 18px 2px;
+        line-height:1.6;
+        font-weight:bold;
+        margin-bottom: 15px;
+    }
+
+    label[for="eddmm_madmimi_signup"] {
+        font-weight:100;
+        font-size:@font-size-small;
+        padding-left:38px;
+    }
+
+    .edd-cancel {
+        position: absolute;
+        left:-10000px;
+        height:0;
+        .opacity(0);
+    }
+
+    #edd-login-account-wrap {
+        background:white;
+        .box-shadow(0 0 5px rgba(0,0,0,0.2));
+        margin-left:0;
+        margin-right:0;
+    }
+
+    #edd_checkout_login_register {
+        margin-top:35px;
+    }
+    #edd-login-account-wrap {
+        margin-top:-50px;
+    }
+}
+
+.text--small {
+    font-size: @font-size-small - 0.1;
+    line-height: @font-size-small;
+    font-family: @font-family-sans-serif;
+    color:lighten(@text-color,25);
+}
+
+#edd_user_history th {
+    background:white;
+    padding:5px;
+}
+#edd_user_history th,
+#edd_user_history td {
+    border-bottom:1px solid @accent;
+}
+
+#edd_checkout_cart th, 
+#edd_checkout_cart td {
+    border:1px solid @accent;
+    padding: 0.5em 1.387em !important;
+}
+
+
+.edd_cart_amount {
+    color: @primary;
+}
+
+.edd_errors {
+    .alert();
+    border-color:darken(@brand-danger,5);
+}
+
+.edd_cart_actions {
+    a:hover {
+        color:@primary;
+    }
+}

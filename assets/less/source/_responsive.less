@@ -1,0 +1,164 @@
+@media (max-width:700px) {
+    // base typography
+    html {
+        font-size:1.125rem;
+    }
+
+    p {margin-bottom: 1em;}
+
+    h1, h2, h3, h4 {
+        margin: 1.114em 0 0.5em;
+    }
+
+    h1 {
+        font-size: 3.698em;
+    }
+
+    h2 {font-size: 2.527em;}
+    h3 {font-size: 1.699em;}
+    h4 {font-size: 1.114em;}
+
+
+    .lasso-theme--section__faq ul,
+    .lasso-theme--words-grid,
+    .lasso-theme--feature,
+    .lasso-theme--post-entry > *:not(.aesop-component) {
+        padding-left:@padding-px;
+        padding-right:@padding-px;
+    }
+    .lasso-theme-page {
+        padding-left:@padding-px;
+        padding-right:@padding-px;
+
+        .lasso-theme--post-entry>:not(.aesop-component) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+    }
+
+    body .lasso-theme-page .lasso-theme--post-entry {
+        code,pre {
+            padding-left:10px !important;
+            padding-right:10px !important;
+        }
+    }
+
+    body .lasso-theme--help-entry li,
+    body .lasso-theme--section__words ul li {
+        width:100%;
+        float:none;
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+}
+
+@media (max-width:480px) {
+   body {
+
+        .lasso-theme--mast__wrap h1 {
+            margin-top: 0;
+        }
+
+        .lasso-theme--mast__inner,
+        .lasso-theme--section__info.cta,
+        .lasso-theme--section__info.has-bg {
+            .lasso-theme--section__gut {
+                padding-left:0;
+                padding-right:0;
+            }
+        }
+        .lasso-theme--feature-grid li,
+        .lasso-theme--pricing__single {
+            width:100%;
+            display:block;
+            margin:0 auto 25px;
+            float:none;
+        }
+        .lasso-theme--section__info.cta {
+            a {
+                display: block;
+                width:100%;
+
+                + a {
+                    margin-top:15px;
+                }
+            }
+        }
+        .lasso-theme--feature-grid li {
+            margin-bottom: 0;
+        }
+
+        .lasso-theme--section__faq li {
+            margin-bottom: 15px;
+        }
+
+        .lasso-theme--section__hero h2 {
+            margin-top:15px;
+        }
+
+        .lasso-theme--feature {
+            margin: 20px auto;
+            .lasso-theme--feature__col {
+                .clearfix();
+            }
+            .lasso-theme--feature__col.text,
+            .lasso-theme--feature__col.img {
+                width:100%;
+                float:none;
+                display: block;
+                margin-right:0;
+                margin-left:0;
+            }
+
+            .lasso-theme--feature__col.text {
+                margin-top:25px;
+            }
+        }
+   }
+
+}
+
+@media(max-width:400px){
+
+    body {
+        .lasso-theme--logo {
+            max-width:70px;
+        }
+        .lasso-theme--mast__wrap.page {
+            min-height:90px;
+        }
+        .lasso-theme--menu__secondary li {
+            margin:0 6px;
+        }
+
+        .lasso-theme-page,
+        .lasso-theme--mast__inner {
+            padding-left: 12px;
+            padding-right: 12px
+        }
+        .lasso-theme--mast__wrap h1 {
+            font-size:2.15em;
+            margin-bottom: 5px;
+        }
+        .lead {
+            line-height:1.2;
+        }
+        .lasso-theme--feature .btn i {
+            font-size:15px;
+            line-height: 1px;
+        }
+        .btn-white i {
+            font-size: 18px;
+            line-height: 16px;
+        }
+
+        &.page-template-template--pricing {
+            .lasso-theme--faq-list {
+                padding-left:0;
+                padding-right:0;
+            }
+        }
+    }
+}

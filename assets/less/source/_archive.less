@@ -1,0 +1,42 @@
+.lasso-theme--pagination {
+    padding:0;
+    margin:2em auto;
+    .clearfix;
+    text-align: center;
+
+
+    span,
+    .page-numbers {
+        display: inline-block;
+        vertical-align: top;
+        padding:6px 12px;
+        margin: 0;
+        background:white;
+        border:1px solid @accent;
+        font-size: @font-size-small;
+        font-family: @font-family-sans-serif;
+        color:fadeout(@text-color,25);
+        .transition(background .15s ease);
+        border-radius:3px;
+
+        &.current,
+        &:hover {
+            background:@link-color;
+            color: white;
+            text-decoration: none;
+        }
+
+        &:first-child {
+            margin-left:0;
+        }
+
+        &:last-child {
+            margin-right:0;
+        }
+
+        &.next {
+
+        }
+    }
+
+}

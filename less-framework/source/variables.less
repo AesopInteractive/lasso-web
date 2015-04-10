@@ -1,0 +1,335 @@
+/*
+* COLORS
+*/
+@gray-base:              #000;
+@gray-darker:            lighten(@gray-base, 13.5%); // #222
+@gray-dark:              lighten(@gray-base, 20%);   // #333
+@gray:                   lighten(@gray-base, 33.5%); // #555
+@gray-light:             lighten(@gray-base, 46.7%); // #777
+@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+
+@base:              #f6f6f6;
+@baseLight:         #fff;
+@white:             #FFF;
+@accent:            darken(@base, 15);
+@primary:           #007aab;
+@link-color:        @primary;
+@primary-hover:     darken(@primary,7);
+@link-hover-color:  @primary-hover;
+@gray:              #f5f5f5;
+@text-color:        #333;
+@warning:           #be1f33;
+@off-white:         #f8f8f8;
+
+@brand-success:         #5cb85c;
+@brand-info:            #5bc0de;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
+/**
+*    FONTS
+*/
+@font-family-heading:    "futura-pt",sans-serif;
+
+@font-family-sans-serif:  @font-family-heading;
+@font-family-serif:       "ff-tisa-web-pro",serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-serif;
+@font-family-button:      'Helvetica', arial, sans-serif;
+
+@font-size-base:          1.375rem;
+@font-size-large:         round( @font-size-base * 1.25, 1);
+@font-size-small:         @font-size-base * 0.6;
+@font-size-tiny:         @font-size-base * 0.45;
+
+@font-size-h1:            @font-size-base * 2.9; // 3.998rem
+@font-size-h2:            @font-size-base * 1.8; // 2.827rem
+@font-size-h3:            @font-size-base * 1.454; // 1.999rem
+@font-size-h4:            @font-size-base * 1.029; // 1.414rem;
+@font-size-h5:            @font-size-base;
+@font-size-h6:            @font-size-small + 0.25;
+
+
+@line-height-base:       1.45;
+/*
+*   LAYOUT
+*/
+@width:              700px;
+@width-wide:         960px;
+@login-width:        500px;
+@menu-width:         250px;
+@padding:            0.5;
+@padding-px:         25px;
+
+
+/**
+*
+* PAGE
+*
+*/
+@page_bg:                    @gray;
+
+/**
+* forms
+*/
+//== Forms
+//
+//##
+
+//** `<input>` background color
+@input-bg:                       @base;
+//** `<input disabled>` background color
+@input-bg-disabled:              @gray-lighter;
+
+//** Text color for `<input>`s
+@input-color:                    @text-color;
+//** `<input>` border color
+@input-border:                   #ccc;
+
+// TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
+//** Default `.form-control` border radius
+// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+@input-border-radius:            @border-radius-base;
+//** Large `.form-control` border radius
+@input-border-radius-large:      @border-radius-large;
+//** Small `.form-control` border radius
+@input-border-radius-small:      @border-radius-small;
+
+//** Border color for inputs on focus
+@input-border-focus:             #66afe9;
+
+//** Placeholder text color
+@input-color-placeholder:        #999;
+
+//** Default `.form-control` height
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+//** Large `.form-control` height
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+//** Small `.form-control` height
+@input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+
+//** `.form-group` margin
+@form-group-margin-bottom:       15px;
+
+@legend-color:                   @gray-dark;
+@legend-border-color:            #e5e5e5;
+
+//** Background color for textual input addons
+@input-group-addon-bg:           @gray-lighter;
+//** Border color for textual input addons
+@input-group-addon-border-color: @input-border;
+
+//** Disabled cursor for form controls and buttons.
+@cursor-disabled:                not-allowed;
+
+/*
+*   Buttons
+*/
+@border-radius-base:        5px;
+@button--background:        @primary;
+@button--color:             #EAEAEA;
+
+@btn-font-weight:                normal;
+
+@btn-default-color:              #333;
+@btn-default-bg:                 #fff;
+@btn-default-border:             #ccc;
+
+@btn-primary-color:              #fff;
+@btn-primary-bg:                 @primary;
+@btn-primary-border:             darken(@primary, 5%);
+
+@btn-success-color:              #fff;
+@btn-success-bg:                 @brand-success;
+@btn-success-border:             darken(@btn-success-bg, 5%);
+
+@btn-info-color:                 #fff;
+@btn-info-bg:                    @brand-info;
+@btn-info-border:                darken(@btn-info-bg, 5%);
+
+@btn-warning-color:              #fff;
+@btn-warning-bg:                 @brand-warning;
+@btn-warning-border:             darken(@btn-warning-bg, 5%);
+
+@btn-danger-color:               #fff;
+@btn-danger-bg:                  @brand-danger;
+@btn-danger-border:              darken(@btn-danger-bg, 5%);
+
+@btn-link-disabled-color:        @gray;
+
+@padding-base-vertical:          6px;
+@padding-base-horizontal:        14px;
+
+@padding-large-vertical:         10px;
+@padding-large-horizontal:       16px;
+
+@padding-small-vertical:         5px;
+@padding-small-horizontal:       10px;
+
+@padding-xs-vertical:            1px;
+@padding-xs-horizontal:          5px;
+
+/*
+*   Icons
+*/
+@icon--color:               #777;
+
+/*
+*   Badge System
+*
+*/
+@badge--font__size:   14px;
+@badge--color:          white;
+@badge--font__family:  @font-family-sans-serif;
+
+// Extra small screen / phone
+//** Deprecated `@screen-xs` as of v3.0.1
+@screen-xs:                  480px;
+//** Deprecated `@screen-xs-min` as of v3.2.0
+@screen-xs-min:              @screen-xs;
+//** Deprecated `@screen-phone` as of v3.0.1
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `@screen-sm` as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+//** Deprecated `@screen-tablet` as of v3.0.1
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `@screen-md` as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3
+
+//== Modals
+//
+//##
+
+//** Padding applied to the modal body
+@modal-inner-padding:         15px;
+
+//** Padding applied to the modal title
+@modal-title-padding:         15px;
+//** Modal title line-height
+@modal-title-line-height:     1;
+
+//** Background color of modal content area
+@modal-content-bg:                             #fff;
+//** Modal content border color
+@modal-content-border-color:                   @accent;
+//** Modal content border color **for IE8**
+@modal-content-fallback-border-color:          #999;
+
+//** Modal backdrop background color
+@modal-backdrop-bg:           rgba(0,0,0,0.6);
+//** Modal backdrop opacity
+@modal-backdrop-opacity:      .5;
+//** Modal header border color
+@modal-header-border-color:   #e5e5e5;
+//** Modal footer border color
+@modal-footer-border-color:   @accent;
+
+@modal-xl:                    96%;
+@modal-lg:                    900px;
+@modal-md:                    600px;
+@modal-sm:                    300px;
+
+//== Close
+//
+//##
+
+@close-font-weight:           bold;
+@close-color:                 #000;
+@close-text-shadow:           0 1px 0 #fff;
+
+//** Width of the `border` for generating carets that indicator dropdowns.
+@caret-width-base:          4px;
+//** Carets increase slightly in size for larger components.
+@caret-width-large:         5px;
+
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+//** Background for the dropdown menu.
+@dropdown-bg:                    #fff;
+//** Dropdown menu `border-color`.
+@dropdown-border:                rgba(0,0,0,.15);
+//** Dropdown menu `border-color` **for IE8**.
+@dropdown-fallback-border:       #ccc;
+//** Divider color for between dropdown items.
+@dropdown-divider-bg:            #e5e5e5;
+
+//** Dropdown link text color.
+@dropdown-link-color:            @text-color;
+//** Hover color for dropdown links.
+@dropdown-link-hover-color:      darken(@text-color, 5%);
+//** Hover background for dropdown links.
+@dropdown-link-hover-bg:         #f5f5f5;
+
+//** Active dropdown menu item text color.
+@dropdown-link-active-color:     @primary;
+//** Active dropdown menu item background color.
+@dropdown-link-active-bg:        @primary;
+
+//** Disabled dropdown menu item background color.
+@dropdown-link-disabled-color:   @accent;
+
+//** Text color for headers within dropdown menus.
+@dropdown-header-color:          @accent;
+
+//** Deprecated `@dropdown-caret-color` as of v3.1.0
+@dropdown-caret-color:           #000;
+
+@zindex-dropdown:          1000;
+
+// Tables
+@table-cell-padding:            8px;
+@table-condensed-cell-padding:  5px;
+@table-bg:                      transparent;
+@table-bg-accent:               @off-white;
+@table-bg-hover:                @gray;
+@table-bg-active:               @table-bg-hover;
+@table-border-color:            darken(@white,10);
+
+// responsive
+@responsive--padding:           1;
+
+
+@sweet-alert__bg:                 #fff;
+@sweet-alert__button__bg:        @brand-info;
+
+@cursor-disabled:                not-allowed;
+@link-hover-decoration: underline;
+@line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
+@border-radius-base:        4px;
+@border-radius-large:       6px;
+@border-radius-small:       3px;
+@line-height-small:         1.5;
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+
+@state-success-text:             #3c763d;
+@state-success-bg:               #dff0d8;
+@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+
+@state-info-text:                #31708f;
+@state-info-bg:                  #d9edf7;
+@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
+
+@state-warning-text:             #8a6d3b;
+@state-warning-bg:               #fcf8e3;
+@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+
+@state-danger-text:              #a94442;
+@state-danger-bg:                #f2dede;
+@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
+

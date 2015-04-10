@@ -1,0 +1,41 @@
+#loginform {
+
+    background:white;
+    border:1px solid @accent;
+    border-radius:3px;
+    padding:@padding-px;
+    max-width:400px;
+    margin:20px auto 0;
+
+    + a {
+        display: block;
+        max-width:400px;
+        margin:10px auto 40px;
+        font-size: @font-size-small;
+        font-family: @font-family-sans-serif;
+        font-style: italic;
+        color:inherit;
+
+        &:hover {
+            color:@primary;
+        }
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    .login-submit {
+        margin: 20px auto 0;
+    }
+}
+
+.login-msg {
+    max-width:400px;
+    margin:20px auto 0;
+    .alert();
+
+    strong {
+        font-weight:700;
+    }
+}

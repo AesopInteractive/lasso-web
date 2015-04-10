@@ -1,0 +1,106 @@
+.lasso-theme--entry-header,
+.lasso-theme--post-entry > *:not(.aesop-component){
+    .theme-width()
+}
+
+.lasso-theme--entry-header {
+
+    text-align: center;
+    border-bottom:1px solid @accent;
+    .x-rem(padding-bottom,@padding * 2);
+    .x-rem(margin-bottom,@padding * 2);
+
+    .lasso-theme--entry-meta {
+        font-size:@font-size-small;
+        font-family:@font-family-sans-serif;
+
+        li {
+            line-height: 1;
+        }
+    }
+
+    time{
+        font-style:italic;
+        font-size: @font-size-tiny;
+        line-height: 1;
+    }
+
+    .avatar-wrap{
+        display:block;
+        position:relative;
+        max-width:50px;
+        margin:0 auto;
+
+        @width: 60px;
+
+        img {
+            border-radius:100%;
+            margin:15px auto;
+            border:1px solid @accent;
+            background:white;
+            padding:2px;
+        }
+
+        &:before,
+        &:after {
+            content:'';
+            position:absolute;
+            top:26px;
+            height:1px;
+            background: fadeout(@accent,25);
+            width:@width;
+        }
+
+        &:before {
+            left:-@width;
+        }
+        &:after {
+            right:-@width;
+        }
+    }
+}
+
+.lasso-theme--share{
+    text-align: center;
+    margin-bottom:40px;
+    a {
+        display: inline-block;
+        color:#777;
+        font-family:@font-family-sans-serif;
+        line-height:1.82;
+        font-size: @font-size-small;
+        background:lighten(@accent,5);
+        border:1px solid @accent;
+        padding:0 8px;
+        border-radius:3px;
+
+        &:first-child {
+            margin-right:7px;
+        }
+
+        i {
+            border-right:1px solid #ccc;
+            .box-shadow(1px 0 1px rgba(255,255,255,0.1));
+            line-height:1.6;
+            height:32px;
+            padding-right:5px;
+            width:31px;
+            margin-right:3px;
+            transition:none;
+        }
+
+        &:hover {
+            background:@primary;
+            color:white;
+
+            i {
+                border-right-color:darken(@primary,3);
+            }
+        }
+
+        &:active {
+            background: lighten(@primary,4);
+            .box-shadow(inset 1px 1px 2px rgba(0,0,0,0.2));
+        }
+    }
+}
