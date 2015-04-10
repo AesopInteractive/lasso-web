@@ -15,10 +15,6 @@ class lassoThemeFunctions {
 		require_once(LASSO_THEME_DIR.'/inc/helpers.php');
 		require_once(LASSO_THEME_DIR.'/inc/options.php');
 		require_once(LASSO_THEME_DIR.'/inc/scripts.php');
-		require_once(LASSO_THEME_DIR.'/inc/class.login.php');
-		require_once(LASSO_THEME_DIR.'/inc/class.edd-functions.php');
-		require_once(LASSO_THEME_DIR.'/inc/class.social.php');
-		require_once(LASSO_THEME_DIR.'/inc/class.docs.php');
 	}
 
 	function setup(){

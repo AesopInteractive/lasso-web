@@ -11,11 +11,10 @@ $padded = is_front_page() ? 'front' : 'page'; ?>
 		<?php if ( is_front_page() ): ?>
 			<div class="lasso-theme--section__gut">
 
-				<h1>Front End Editing Made Easy</h1>
-				<p class="lead">Edit text, images, maps, galleries, and more with an intuitive and easy to use drag and drop editor framework for WordPress.</p>
+				<h1>Lasso Demo</h1>
+				<p class="lead">Create your own fully functional demo of Lasso in less than 60 seconds..</p>
 
-				<a class="btn btn-white" href="/awesome"><i class="dashicons dashicons-admin-site"></i> Demo</a>
-				<a class="btn btn-white" href="/pricing"><i class="dashicons dashicons-cart"></i>Buy Now</a>
+				<a class="btn btn-white" href="/awesome"><i class="dashicons dashicons-admin-site"></i> Create my Demo</a>
 
 				<img class="lasso-theme--mast__img" src="<?php echo LASSO_THEME_URL.'/assets/img/building-with-lasso-C.gif';?>" alt="lasso">
 
