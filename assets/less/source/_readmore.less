@@ -1,0 +1,103 @@
+.lasso-theme-read-more {
+    .theme-width();
+    .clearfix;
+    margin-bottom:20px;
+
+    .lasso-theme-adjacent-posts {
+        display: table;
+        width: 100%;
+    }
+    article {
+        width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0;
+        min-height: 0;
+
+        border-top: 1px solid @accent;
+        //border-bottom:1px solid @accent;
+        &.adjacent-next {
+            border-left: 1px solid @accent;
+            text-align: right;
+        }
+
+        @media ( max-width:600px ) {
+            display: block;
+            width: 100%;
+        }
+        .lasso-theme-archive-entry-inner {
+            padding:20px 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            color:lighten(@text-color,25);
+
+
+        &:hover {
+            color:@primary;
+        }
+
+            h4 {
+                margin:0;
+            }
+            @media ( max-width:600px ) {
+                padding:3rem 0;
+                display: block;
+            }
+        }
+    }
+    &.lasso-theme-one-adjacent {
+        text-align: left;
+        .lasso-theme-collection-item {
+            width: 100%;
+            display: block;
+            .lasso-theme-archive-entry-inner {
+                display: block;
+            }
+        }
+    }
+
+    &.lasso-theme-one-adjacent {
+        a {
+            width: 100%;
+        }
+
+    }
+}
+.adjacent-label {
+    //.lasso-theme-small-bold;
+    font-size: 14px;
+    font-weight:bold;
+    position: relative;
+    display: block;
+
+    .no-thumbnail & {
+        color: rgba(0,0,0,.35);
+        text-shadow: none;
+    }
+    .lasso-theme-one-adjacent & {
+        position: relative;
+        left: 0;
+        top: -10px;
+        display: block;
+
+    }
+}
+
+.lasso-theme-post-adjacent {
+    text-decoration: none;
+    text-shadow: -2px 0 2px rgba(0,0,0,0.5);
+    position: relative;
+
+    span,h4 {
+        position: relative;
+        z-index:1;
+    }
+
+   // .lasso-theme-post-archive-meta; //mixins.less
+
+    &:hover {
+        text-decoration: none;
+    }
+
+}

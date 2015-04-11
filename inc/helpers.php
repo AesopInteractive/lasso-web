@@ -1,21 +1,5 @@
 <?php
 
-/**
-*
-*	Get the direct purchase link of lasso with pricing option
-*
-*	@return purchase link with download id and price id
-*/
-function lasso_theme_get_purchase_url( $download_id = 0, $price_id = 1 ){
-
-	if ( empty( $download_id ) || empty( $price_id ) )
-		return;
-
-	$url = sprintf('%s/checkout?edd_action=add_to_cart&download_id=%s&edd_options[price_id]=%s"', get_bloginfo('url'), absint( $download_id ), absint( $price_id ) );
-
-	return $url;
-}
-
 function lassotheme_get_pagination(){
 
 	global $wp_query, $numpages;

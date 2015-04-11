@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/BlogPosting">
+<article id="post-<?php the_ID(); ?>" <?php post_class(array('class' => 'aesop-entry-content')); ?> itemscope itemtype="http://schema.org/BlogPosting">
 
 	<header class="lasso-theme--entry-header">
 
@@ -35,14 +35,23 @@
 
 	<?php // Content ?>
 	<div itemprop="text" class="lasso-theme--post-entry">
-		<?php the_content('Read more...'); ?>
+
+		<?php
+
+		if ( is_home() ) {
+
+			the_excerpt();
+
+		} else {
+
+			the_content('Read more...');
+
+		}
+
+		?>
+
 	</div>
 
-	<?php if ( is_single() ): ?>
-		<footer class="lasso-theme--share">
-			<a href="#" class="post-share__twitter"><i class="dashicons dashicons-twitter"></i> Share on Twitter</a>
-			<a href="#" class="post-share__fb"><i class="dashicons dashicons-facebook"></i> Share on Facebook</a>
-		</footer>
-	<?php endif ;?>
+	<?php get_template_part('content/readmore'); ?>
 
 </article><!-- .entry-content -->
