@@ -52,6 +52,14 @@
 
 	</div>
 
-	<?php get_template_part('content/readmore'); ?>
+	<?php
+
+	if ( is_single() ) {
+
+		get_template_part('content/readmore');
+
+	}
+
+	?>
 
 </article><!-- .entry-content -->

@@ -12,11 +12,9 @@ $padded = is_front_page() ? 'front' : 'page'; ?>
 			<div class="lasso-theme--section__gut">
 
 				<h1>Lasso Demo</h1>
-				<p class="lead">Create your own fully functional demo of Lasso in less than 60 seconds..</p>
+				<p class="lead">Create your own fully functional demo in less than 60 seconds.</p>
 
-				<a class="btn btn-white" href="/awesome"><i class="dashicons dashicons-admin-site"></i> Create my Demo</a>
-
-				<img class="lasso-theme--mast__img" src="<?php echo LASSO_THEME_URL.'/assets/img/building-with-lasso-C.gif';?>" alt="lasso">
+				<?php echo do_shortcode('[try_demo source_id="2"]');?>
 
 			</div>
 		<?php endif; ?>
