@@ -60,29 +60,31 @@ class lassoThemeFunctions {
 
 		if ( class_exists('trackWP') ) {
 
-			$user_id = rand();
-
 		  	global $ninja_forms_processing;
 
-		  	//Get all the user submitted values
+		  	// generate a random userid
+		  	$user_id = rand();
+
+		  	// get data from the form
 		  	$data = $ninja_forms_processing->get_all_fields();
 
-		  	// the email field
+		  	// get the email field
 		  	$email = $data[6];
 
+		  	// set some traits for this event and user
 		  	$traits = array(
 				'userId' 	=>  $user_id,
 				'email' 	=>  $email,
 			);
 
-			// track the discount code within customerio
-			$args = array(
+			// set some props for this event
+			$props = array(
 	        	'email' 	=> $email,
 	        	'created'		=> time()
 			);
 
 	  		trackWP::identify_user( $user_id, $traits );
-		  	trackWP::track_event( 'demo_created', $args, $traits, $user_id );
+		  	trackWP::track_event( 'demo_created', $props, $traits, $user_id );
 
 		}
 
