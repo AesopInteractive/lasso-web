@@ -14,7 +14,7 @@ $padded = is_front_page() ? 'front' : 'page'; ?>
 				<h1>Lasso Demo</h1>
 				<p class="lead">Create your own fully functional demo in less than 60 seconds.</p>
 
-				<?php echo do_shortcode('[try_demo source_id="2"]');?>
+				<?php echo do_shortcode('[ninja_forms id=5]');?>
 
 			</div>
 		<?php endif; ?>
